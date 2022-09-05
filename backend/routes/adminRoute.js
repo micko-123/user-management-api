@@ -4,17 +4,22 @@ const {    getEmployee,
     addEmployee,
     updateEmployee,
     deleteEmployee} = require('../controllers/adminController')
-
-router.get('/', getEmployee)
-
-
-router.post('/', addEmployee)
-
-
-router.put('/:id', updateEmployee)
+    const {
+        registerEmployee,
+        loginUser,
+        getMe,
+      }  = require('../controllers/adminController')
 
 
-router.delete('/:id', deleteEmployee)
+const { protect } = require('../middleware/authMiddleware')
 
+
+router.route('/').get(protect, getEmployee).post(protect, getEmployee)
+router.route('/:id').delete(protect, deleteEmployee).put(protect, updateEmployee)
+
+
+router.post('/', registerEmployee)
+router.post('/login', loginUser)
+router.get('/me', protect, getMe)
 
 module.exports = router

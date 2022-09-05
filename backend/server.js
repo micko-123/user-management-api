@@ -13,7 +13,7 @@ app.use(errorHandler)
 
 
 app.use('/api/employees', require('./routes/adminRoute'))
-
+app.use('/api/employee', require('./routes/employeeRoute'))
 
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

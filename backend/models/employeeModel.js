@@ -15,6 +15,10 @@ const employeeSchema = mongoose.Schema(
       required: [true, 'Please add an email'],
       unique: true,
     },
+    password: {
+      type: String,
+      required: [true, 'Please add a password'],
+    },
     gender: {
         type: String,
         required: [true]
