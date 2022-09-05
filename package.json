@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+    
   },
   "author": "Mickyas Asnake",
   "license": "ISC",
@@ -13,5 +15,8 @@
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
