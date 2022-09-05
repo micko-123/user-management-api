@@ -1,22 +1,24 @@
+const asyncHandler = require('express-async-handler')
 
-const getEmployee = (req, res) => {
+
+const getEmployee = asyncHandler( async (req, res) => {
     res.send('geting employee')
-}
+})
 
 
-const addEmployee = (req, res) => {
+const addEmployee =  asyncHandler( async(req, res) => {
     res.send('adding employee')
-}
+})
 
 
-const updateEmployee = (req, res) => {
+const updateEmployee = asyncHandler( async (req, res) => {
     res.send('updating employee')
-}
+})
 
 
-const deleteEmployee = (req, res) => {
+const deleteEmployee = asyncHandler( async (req, res) => {
     res.send('deleting employee')
-}
+})
 
 
 module.exports ={
